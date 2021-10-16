@@ -1,0 +1,148 @@
+/* FONT FACES */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,600;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:ital,wght@0,100;0,400;0,600;1,300&display=swap");
+/* ATTRIBUTION */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  background: hsl(257, 40%, 49%);
+  background-image: url(images/bg-desktop.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  min-height: 100vh;
+}
+
+.logo {
+  margin-top: 1rem;
+}
+
+section.main {
+  max-width: 90vw;
+  margin: auto;
+}
+
+.flyer {
+  max-width: 85vw;
+  max-height: 90vw;
+  margin: auto;
+  margin-top: 6vw;
+  display: flex;
+  gap: calc(15vw - 120px);
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  margin-top: 1.3rem;
+}
+
+.cta {
+  display: inline-flex;
+  padding: 0.8rem;
+  border-radius: 15px;
+  padding: 0.7em 2.5em;
+  color: hsl(228, 45%, 44%);
+  background-color: #fff;
+}
+.cta:hover{
+  box-shadow: 5px 5px 5px rgba(0,0,0,.2);
+  background-color: hsla(300, 69%, 71%);
+  transition: all .4s ease;
+  color: white;
+}
+
+.text {
+  flex-grow: 1;
+  font-size: 1.05rem;
+  font-size: clamp(0.75rem, 2vw, 1.2rem);
+  font-weight: 400;
+}
+.text::selection{
+  background-color: hsl(300, 69%, 71%);
+}
+
+.txthead {
+  font-family: "Poppins-Bold", sans-serif;
+  font-size: 2rem;
+  font-size: clamp(1.8rem, 2rem, 2.5rem);
+  line-height: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1.3rem;
+}
+
+.socials {
+  text-align: right;
+  display: flex;
+  position: absolute;
+  width: 85vw;
+  justify-content: flex-end;
+  bottom: 0;
+  margin-top: 3.5em;
+}
+
+.fab:hover {
+  color: hsl(300, 69%, 71%);
+  border: 1px solid hsl(300, 69%, 71%);
+  transform: translateY(-10px);
+}
+.fab {
+  display: inline-flex !important;
+  transition: all 0.5s ease-out;
+  color: white;
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 33px;
+  height: 33px;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  font-size: 13px;
+  margin-left: 0.8em;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1024px) {
+  .flyer {
+    margin-top: 15vh;
+    z-index: 2;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .socials {
+    text-align: center;
+    position: relative;
+    justify-content: center;
+    bottom: 0;
+    margin-bottom: 0;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .logo {
+    width: 50%;
+  }
+
+  body {
+    overflow: visible;
+    background-image: url("images/bg-mobile.svg");
+    background-size: 100% auto;
+    background-position: center top;
+  }
+}
