@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>
+      Frontend Mentor | Huddle landing page with single introductory section
+    </title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <!-- NAV -->
+    <section class="main">
+      <nav>
+        <div class="logo">
+          <img src="images/logo.svg" alt="" class="logo" />
+        </div>
+      </nav>
+      <!-- MAIN -->
+      <div class="flyer">
+        <div class="illustration">
+          <img src="images\illustration-mockups.svg" alt="illustration" class="hero" />
+        </div>
+        <div class="text">
+          <h2 class="txthead">Build The Community Your Fans Will Love</h2>
+          Huddle re-imagines the way we build communities. You have a voice, but
+          so does your audience. Create connections with your users as you
+          engage in genuine discussion.
+          <div class="button"><a href="" class="cta">Register</a></div>
+        </div>
+        <div class="socials">
+          <a href="https://web.facebook.com/adedotun.adeyinka.33/"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="https://github.com/adeyinkaezra123"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a href="https://ng.linkedin.com/in/ezra-adeyinka"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      window.onload = function () {
+        const element = document.querySelector(".flyer");
+        element.classList.add("animate__animated", "animate__fadeInLeftBig");
+      };
+    </script>
+    <script
+      src="https://kit.fontawesome.com/78706d69ff.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
