@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>IP Address Tracker</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+  <link rel="stylesheet" href="style.css">
+  
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="tracker-header">
+      <h1>IP Address Tracker</h1>
+      <div class="searchbar">
+        <input class="search" type="text"placeholder="Search for any IP address or domain">
+        <button class="submit"><img src="images/icon-arrow.svg" alt=""></button>
+      </div>
+      <div class="ip-tracker-info">
+        <div class="ip-address info">
+          <p>IP Address</p>
+          <div class="ip">-</div>
+        </div>
+        <div class="c-location info">
+          <p>Location</p>
+          <div class="location">
+            <span class="city">-</span>,<span class="country">-</span><span class="zip-code"> -</span>
+          </div>
+        </div>
+        <div class="timezone info">
+          <p>Timezone</p>
+          <div class="local-time-zone"> UTC<span class="time-zone"></span>
+          </div>
+        </div>
+        <div class="c-isp info">
+          <p>ISP</p>
+          <div class="isp">-</div>
+        </div>
+      </div>
+    </header>
+    <div id="map">
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://www.github.com/adeyinkaezra123" target="_blank">Ezra Adeyinka</a>.
+      </div>
+    </div>
+  </div>
+</body>
+</html>

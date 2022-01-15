@@ -1,0 +1,253 @@
+:root{
+    /* #Colors */
+
+--Very-Dark-Gray: hsl(0, 0%, 17%);
+--Dark-Gray: hsl(0, 0%, 59%);
+
+/*  Typography */
+
+/* Body Copy */
+
+--Font-size-text-input: 18px;
+
+/*Font */
+
+--font-family: 'Rubik', sans-serif;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+.container{
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 13rem auto;
+    font-family: var(--font-family);
+}
+.tracker-header{
+    background-image: url(images/pattern-bg.png);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.searchbar{
+    width: 30%;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+}
+.search{
+    width: 90%;
+    border: none;
+    border-radius: 10px 0px 0px 10px;
+    outline: none !important;
+    padding: 1rem;
+    /* cursor: pointer; */
+    color: var(--Very-Dark-Gray);
+    font-size: var(--font-family);
+}
+.search:focus{
+    border: 2px solid #4568dc;
+}
+.submit{
+    width: 10%;
+    border: none;
+    border-radius: 0px 10px 10px 0px;
+    background-color: black;
+    cursor: pointer;
+}
+.submit:hover{
+    background-color: var(--Very-Dark-Gray);
+}
+.ip-tracker-info{
+    padding:2rem ;
+    display: flex;
+    min-width: 80%;
+    height: fit-content;
+    top: 8rem;
+    border-radius: 20px;
+    background-color: white;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    z-index: 9999;
+}
+
+.info{
+    height: 100%;
+    width: 25%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: relative;
+    font-size: 1.4rem;
+    font-weight: 900;
+}
+.ip-address{
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    min-width: max-content;
+    position: relative;
+}
+.ip{
+    display: flex;
+    min-width: max-content;
+    height: 90%;
+    border-right: solid 1px var(--Dark-Gray);
+    padding-top: 1rem;
+    color: var(--Very-Dark-Gray);
+    position: relative;
+}
+.c-location{
+    /* min-width: max-content; */
+    display: flex;
+    flex-direction: column;
+    color: var(--Very-Dark-Gray);
+}
+.location{
+    min-width: min-content;
+    height: 90%;
+    border-right: solid 1px var(--Dark-Gray);
+    padding-top: 1rem;  
+}
+
+.timezone{
+    display: flex;
+    flex-direction: column;
+}
+.local-time-zone{
+    width: 100%;
+    height: 90%;
+    border-right: solid 1px var(--Dark-Gray);
+    padding-top: 1rem;
+    color: var(--Very-Dark-Gray);
+}
+.isp{
+    padding-top: 1rem;
+    color: var(--Very-Dark-Gray);
+    position: relative;
+}
+
+#map{
+    width: 100%;
+    height: 100%;
+    position: relative;
+} 
+
+h1{
+    width: max-content;
+    font-size: 1.4rem;
+    color: white;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+P{
+    color: var(--Dark-Gray);
+    text-transform:uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 900;
+    height: 10%;
+}
+.zip-code{
+    display: block;
+}
+.leaflet-control-attribution{
+    display: none;
+}
+
+@media screen and (max-width:1150px) {
+    .ip-tracker-info{
+        width: min-content;
+    }
+    .c-location{
+        padding-left: 0;
+    }
+}
+@media screen and (max-width:900px) {
+    .container{
+        grid-template-rows: 18rem auto;
+    }
+    .searchbar{
+        width: 90%;
+        height: 3rem;
+    }
+    .submit{
+        width: 15%;
+    }
+    .ip-tracker-info{
+        padding-top: 1rem;
+        width: 92%;
+        display: flex;
+        min-height: 100% ;
+        top: 8rem;
+        flex-direction: column;
+    }
+    .info{
+        padding: 0.5rem;
+        height: min-content;
+        text-align: center !important;
+
+        width: 100%;
+        align-items: center;
+    }
+    .ip{
+        border-right: none;
+    }
+    .location{
+        border-right: none;
+    }
+    .local-time-zone{
+        border-right: none;
+    }
+    .zip-code{
+        display: inline;
+        margin-left: 5px;
+    }
+    .local-time-zone{
+        display: flex;
+        justify-content: center;
+    }
+    .c-isp{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+@media screen and (max-width:500px) {
+    .info{
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+.attribution { 
+    z-index: 999;
+    position: absolute;
+    font-size: 11px; text-align: center; 
+    bottom: 5px;
+    width: 100%;
+    left: 5px;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
