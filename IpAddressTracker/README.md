@@ -21,7 +21,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Live site URL here](https://wth-is-myip.netlify.app)
+- Live Site URL: [Live site URL here](https://wth-is-my-ip.netlify.app)
 
 
 ### Built with
